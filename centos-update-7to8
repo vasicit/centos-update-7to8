@@ -1,6 +1,7 @@
 #!/bin/bash
 FILE=/update7to8-phase1-done
-test -f "$FILE"; then
+if test -f "$FILE" 
+then
   yum -y install dnf 
   dnf -y remove yum yum-metadata-parser
   rm -Rf /etc/yum
